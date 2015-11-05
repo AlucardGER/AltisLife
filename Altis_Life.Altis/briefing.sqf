@@ -16,7 +16,7 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"", //Subsection
 				"
-				TEXT HERE<br/><br/>
+				HERE<br/><br/>
 				"
 		]
 	];
