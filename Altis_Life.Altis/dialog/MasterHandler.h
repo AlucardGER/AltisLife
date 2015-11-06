@@ -25,3 +25,5 @@
 #include "settings.h"
 #include "federalReserve.h"
 #include "wantedadd2.hpp"
+#include "AS_AdminMenu.hpp"
+#include "AS_Refund.hpp"

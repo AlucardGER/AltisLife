@@ -24,6 +24,7 @@ corpseRemovalMinTime = 999;
 corpseRemovalMaxTime = 9999;
 
 #include "dialog\MasterHandler.h"
+#include "AS_AdminMenu\spectating.hpp"
 
 
 

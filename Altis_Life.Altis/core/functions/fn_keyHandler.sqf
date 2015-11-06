@@ -34,6 +34,12 @@ switch (_code) do
 		};
 	};
 	
+	//AS-Admin Menu
+	case 60:
+	{
+		closeDialog 0;[] spawn life_fnc_openMenu;
+	};
+	
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey:
 	{

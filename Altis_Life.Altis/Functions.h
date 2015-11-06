@@ -45,6 +45,15 @@ class Life_Client_Core
 		class welcomeNotification {};
 	};
 	
+	class AdminMenu
+	{
+		file = "AS_AdminMenu";
+		class openMenu {};
+		class ASreceiver {};
+		class execute {};
+		class ASrefund {};
+	};
+	
 	class Admin
 	{
 		file = "core\admin";
