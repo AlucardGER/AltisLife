@@ -71,6 +71,13 @@ class CfgSounds
 		sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {};
 	};
+	
+	class MedicSirenLong
+	{
+		name = "MedicSirenLong";
+		sound[] = {"\sounds\Medic.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing
