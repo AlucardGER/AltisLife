@@ -77,6 +77,16 @@ switch (_code) do
 			_handled = true;
 		};
 	};
+	
+		//Shift+P = Faded Sound
+		case 25:
+		{
+			if(_shift) then
+			{
+			[] call life_fnc_fadeSound;
+			_handled = true;
+			};
+		};
 
 	//T Key (Trunk)
 	case 20:
@@ -174,6 +184,7 @@ switch (_code) do
 				[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
 			};
 		};
+		
 	};
 	
 	//Holster / recall weapon.
