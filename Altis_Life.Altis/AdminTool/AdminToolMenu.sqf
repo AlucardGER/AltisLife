@@ -21,7 +21,7 @@ _EXECscript10 = 'player execVM "'+_pathtovehiclesSniper+'%1"';
 _EXECscript11 = 'player execVM "'+_pathtovehiclesPistolen+'%1"';
 _EXECscript12 = 'player execVM "'+_pathtovehiclesMG+'%1"';
 
-if ((getPlayerUID player) in ["76561198084167946","76561198003532796","76561198102879481"]) then { // Admin PlayerID Eintragen <--- Hier Bitte Alle Admins eintragen!
+if ((getPlayerUID player) in ["76561198084167946","76561198003532796","76561198102879481","76561198015572039","76561198094627332"]) then { // Admin PlayerID Eintragen <--- Hier Bitte Alle Admins eintragen!
 	if ((getPlayerUID player) in ["PlayerID","PlayerID"]) then { // Mod PlayerID Eintragen
         adminmenu =
         [
@@ -38,7 +38,7 @@ if ((getPlayerUID player) in ["76561198084167946","76561198003532796","765611981
 				["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]	
         ];};
-	if ((getPlayerUID player) in ["76561198084167946","76561198003532796","76561198102879481"]) then { // Super Admin PlayerID Eintragen
+	if ((getPlayerUID player) in ["76561198084167946","76561198003532796","76561198102879481","76561198015572039","76561198094627332"]) then { // Super Admin PlayerID Eintragen
 		adminmenu =
 		[
 			["",true],
@@ -142,39 +142,74 @@ VehicleMenu =
 AutoMenu = 
 [
 	["Autos",true],
-		["ATV", [2],  "", -5, [["expression", format[_EXECscript1,"ATV.sqf"]]], "1", "1"],
-		["B_Truck_01_transport_F", [2],  "", -5, [["expression", format[_EXECscript1,"B_Truck_01_transport_F.sqf"]]], "1", "1"],
-		["B_Truck_01_fuel_F", [2],  "", -5, [["expression", format[_EXECscript1,"B_Truck_01_fuel_F.sqf"]]], "1", "1"],
-		["B_Truck_01_Repair_F", [2],  "", -5, [["expression", format[_EXECscript1,"B_Truck_01_Repair_F.sqf"]]], "1", "1"],
+		["Box_Van", [2],  "", -5, [["expression", format[_EXECscript1,"Box_Van.sqf"]]], "1", "1"],
+		["Hatchback", [2],  "", -5, [["expression", format[_EXECscript1,"Hatchback.sqf"]]], "1", "1"],
+		["Hatchback_Sport", [2],  "", -5, [["expression", format[_EXECscript1,"Hatchback_Sport.sqf"]]], "1", "1"],
+		["Hemtt_Box", [2],  "", -5, [["expression", format[_EXECscript1,"Hemtt_Box.sqf"]]], "1", "1"],
+		["Hemtt_Transport", [2],  "", -5, [["expression", format[_EXECscript1,"Hemtt_Transport.sqf"]]], "1", "1"],
+		["Offroad", [2],  "", -5, [["expression", format[_EXECscript1,"Offroad.sqf"]]], "1", "1"],
+		["Quadbike", [2],  "", -5, [["expression", format[_EXECscript1,"Quadbike.sqf"]]], "1", "1"],
+		["SUV", [2],  "", -5, [["expression", format[_EXECscript1,"SUV.sqf"]]], "1", "1"],
+		["Tempest_Geraet", [2],  "", -5, [["expression", format[_EXECscript1,"Tempest_Geraet.sqf"]]], "1", "1"],
+		["Van", [2],  "", -5, [["expression", format[_EXECscript1,"Van.sqf"]]], "1", "1"],
+		["Zamak", [2],  "", -5, [["expression", format[_EXECscript1,"Zamak.sqf"]]], "1", "1"],
 		["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 OffroadMenu = 
 [
 	["Offroad",true],
-		["AO_MRAP_02_FTV", [2],  "", -5, [["expression", format[_EXECscript6,"O_MRAP_02_F.sqf"]]], "1", "1"],
-		["O_UGV_01_F", [3],  "", -5, [["expression", format[_EXECscript6,"O_UGV_01_F.sqf"]]], "1", "1"],
-		["Hunter Armed", [3],  "", -5, [["expression", format[_EXECscript6,"hunter.sqf"]]], "1", "1"],
-		["Offroad Truck HMG .50", [4],  "", -5, [["expression", format[_EXECscript6,"offroad.sqf"]]], "1", "1"],
+		["Hunter", [2],  "", -5, [["expression", format[_EXECscript6,"Hunter.sqf"]]], "1", "1"],
+		["Hunter_GMG", [2],  "", -5, [["expression", format[_EXECscript6,"Hunter_GMG.sqf"]]], "1", "1"],
+		["Hunter_HMG", [2],  "", -5, [["expression", format[_EXECscript6,"Hunter_HMG.sqf"]]], "1", "1"],
+		["Ifrit", [2],  "", -5, [["expression", format[_EXECscript6,"Ifrit.sqf"]]], "1", "1"],
+		["Ifrit_HMG", [2],  "", -5, [["expression", format[_EXECscript6,"Ifrit_GMG.sqf"]]], "1", "1"],
+		["Marid", [2],  "", -5, [["expression", format[_EXECscript6,"Marid.sqf"]]], "1", "1"],
+		["Offroad_HMG", [2],  "", -5, [["expression", format[_EXECscript6,"Offroad_HMG.sqf"]]], "1", "1"],
+		["Panther", [2],  "", -5, [["expression", format[_EXECscript6,"Panther.sqf"]]], "1", "1"],
+		["Strider", [2],  "", -5, [["expression", format[_EXECscript6,"Strider.sqf"]]], "1", "1"],
+		["Strider_GMG", [2],  "", -5, [["expression", format[_EXECscript6,"Strider_GMG.sqf"]]], "1", "1"],
+		["Strider_HMG", [2],  "", -5, [["expression", format[_EXECscript6,"Strider_HMG.sqf"]]], "1", "1"],
 		["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 HeliMenu = 
 [
 	["Helis",true],
-		["Ka60", [2],  "", -5, [["expression", format[_EXECscript2,"Ka60.sqf"]]], "1", "1"],
-		["Kat", [3],  "", -5, [["expression", format[_EXECscript2,"Kat.sqf"]]], "1", "1"],
+		["Blackfoot", [2],  "", -5, [["expression", format[_EXECscript2,"Goosthawk.sqf"]]], "1", "1"],
+		["Hellcat", [2],  "", -5, [["expression", format[_EXECscript2,"Hellcat.sqf"]]], "1", "1"],
+		["Hummingbird", [2],  "", -5, [["expression", format[_EXECscript2,"Hummingbird.sqf"]]], "1", "1"],
+		["Huron", [2],  "", -5, [["expression", format[_EXECscript2,"Huron.sqf"]]], "1", "1"],
+		["Kajman", [2],  "", -5, [["expression", format[_EXECscript2,"Kajman.sqf"]]], "1", "1"],
+		["Mohawk", [2],  "", -5, [["expression", format[_EXECscript2,"Mohawk.sqf"]]], "1", "1"],
+		["Orca", [2],  "", -5, [["expression", format[_EXECscript2,"Orca.sqf"]]], "1", "1"],
+		["Pawnee", [2],  "", -5, [["expression", format[_EXECscript2,"Pawnee.sqf"]]], "1", "1"],
+		["Taru", [2],  "", -5, [["expression", format[_EXECscript2,"Taru.sqf"]]], "1", "1"],
 		["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 FlugzeugMenu = 
 [
 	["Flugzeuge",true],
-		["I_Plane_Fighter_03_AA_F", [2],  "", -5, [["expression", format[_EXECscript7,"I_Plane_Fighter_03_AA_F.sqf"]]], "1", "1"],
+		["Buzzard_AA", [2],  "", -5, [["expression", format[_EXECscript7,"Buzzard_AA.sqf"]]], "1", "1"],
+		["Buzzard_CAS", [2],  "", -5, [["expression", format[_EXECscript7,"Buzzard_CAS.sqf"]]], "1", "1"],
+		["Neophron", [2],  "", -5, [["expression", format[_EXECscript7,"Neophron.sqf"]]], "1", "1"],
+		["Wipeout", [2],  "", -5, [["expression", format[_EXECscript7,"Wipeout.sqf"]]], "1", "1"],
 		["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 PanzerMenu = 
 [
 	["Panzer",true],
-		["O_MBT_02_cannon_F", [2],  "", -5, [["expression", format[_EXECscript5,"O_MBT_02_cannon_F.sqf"]]], "1", "1"],
-		["I_MBT_03_cannon_F", [3],  "", -5, [["expression", format[_EXECscript5,"I_MBT_03_cannon_F.sqf"]]], "1", "1"],
+		["Kuma", [3],  "", -5, [["expression", format[_EXECscript5,"Kuma.sqf"]]], "1", "1"],
+		["Varsuk", [2],  "", -5, [["expression", format[_EXECscript5,"Varsuk.sqf"]]], "1", "1"],
+		["Tigris", [2],  "", -5, [["expression", format[_EXECscript5,"Tigris.sqf"]]], "1", "1"],
+		["Sochor", [2],  "", -5, [["expression", format[_EXECscript5,"Sochor.sqf"]]], "1", "1"],
+		["Slammer_Up", [2],  "", -5, [["expression", format[_EXECscript5,"Slammer_Up.sqf"]]], "1", "1"],
+		["Scorcher", [2],  "", -5, [["expression", format[_EXECscript5,"Scorcher.sqf"]]], "1", "1"],
+		["Slammer", [2],  "", -5, [["expression", format[_EXECscript5,"Slammer.sqf"]]], "1", "1"],
+		["Sandstorm", [2],  "", -5, [["expression", format[_EXECscript5,"Sandstorm.sqf"]]], "1", "1"],
+		["Marshall", [2],  "", -5, [["expression", format[_EXECscript5,"Marshall.sqf"]]], "1", "1"],
+		["Mora", [2],  "", -5, [["expression", format[_EXECscript5,"Mora.sqf"]]], "1", "1"],
+		["Kamyah", [2],  "", -5, [["expression", format[_EXECscript5,"Kamyah.sqf"]]], "1", "1"],
+		["Gorgon", [2],  "", -5, [["expression", format[_EXECscript5,"Gorgon.sqf"]]], "1", "1"],
+		["Cheetah", [2],  "", -5, [["expression", format[_EXECscript5,"Cheetah.sqf"]]], "1", "1"],
 		["Exit", [13], "", -3, [["expression", ""]], "1", "1"]
 ];
 
