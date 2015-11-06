@@ -25,5 +25,20 @@ if(life_is_arrested) then
 };
 player addRating 9999999;
 
-//Introcam
-[] spawn life_fnc_IntroCam;
+// Intro Scripts
+if((getPos player) distance (getMarkerPos "civ_spawn_1") < 500) then
+{
+[] execVM "script\Intro\Kavala.sqf";
+};
+if((getPos player) distance (getMarkerPos "civ_spawn_2") < 500) then
+{
+[] execVM "script\Intro\Pyrgos.sqf";
+};
+if((getPos player) distance (getMarkerPos "civ_spawn_3") < 500) then
+{
+[] execVM "script\Intro\Athira.sqf";
+};
+if((getPos player) distance (getMarkerPos "civ_spawn_4") < 500) then
+{
+[] execVM "script\Intro\Sofia.sqf";
+};
