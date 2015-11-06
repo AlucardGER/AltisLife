@@ -49,8 +49,7 @@ class Mission
 		"A3_Structures_F_EPA_Items_Vessels",
 		"A3_Structures_F_EPA_Items_Tools",
 		"A3_Structures_F_Mil_Flags",
-		"A3_Characters_F_INDEP",
-		"A3_Soft_F_Offroad_01"
+		"A3_Characters_F_INDEP"
 	};
 	addOnsAuto[]=
 	{
@@ -1823,6 +1822,7 @@ class Mission
 					id=84;
 					side="CIV";
 					vehicle="C_man_1_3_F";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.60000002;
 					text="civ_70";
