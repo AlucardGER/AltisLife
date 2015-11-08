@@ -17,7 +17,7 @@ removeAllAssignedItems player;
 {player removeMagazine _x;} foreach (magazines player);
 RemoveGoggles player;
 
-player forceAddUniform "U_B_HeliPilotCoveralls";
+player forceAddUniform "U_B_CombatUniform_mcam";
 player addBackpack "B_TacticalPack_blk";
 player addItem "FirstAidKit";
 player addItem "FirstAidKit";
