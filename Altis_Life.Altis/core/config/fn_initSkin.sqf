@@ -18,7 +18,7 @@ while {true} do
 	
 	if(playerSide == independent) then
 	{
-		if (uniform player == "U_B_HeliPilotCoveralls") then {
+		if (uniform player == "U_B_CombatUniform_mcam") then {
 			player setObjectTextureGlobal[0,"textures\medic_uniform.jpg"];
 		};
 	};
