@@ -25,7 +25,7 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 {
 while {true} do
     {
-        waitUntil {uniform player == "U_B_HeliPilotCoveralls"};
+        waitUntil {uniform player == "U_B_HeliPilotCoveralls};
         player setObjectTextureGlobal [0,"textures\medic_uniform.jpg"];
         waitUntil {uniform player != "U_B_HeliPilotCoveralls"};
     };
