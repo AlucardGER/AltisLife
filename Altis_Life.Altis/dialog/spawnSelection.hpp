@@ -6,6 +6,18 @@ class life_spawn_selection
  
  class controlsBackground
  {
+	 
+	 	class NativeGamerBackGround : Life_RscPicture
+		{
+		idc = -1;
+		text = "images\taucher.jpg";
+		x = 0.0 * safezoneW + safezoneX;
+		y = 0.0 * safezoneH + safezoneY;
+		w = 1.0 * safezoneW;
+		h = 1.0 * safezoneH;
+		};
+		
+	 
   class life_RscTitleBackground : Life_RscText
   {
    colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
