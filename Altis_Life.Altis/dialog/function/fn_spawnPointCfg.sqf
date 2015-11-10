@@ -36,7 +36,7 @@ switch (_side) do
 		
 		//if have reb license, only spawn here
 		if(license_civ_rebel && playerSide == civilian) then {
-		_ret = [
+		_return = [
 					["reb_spawn_1","Rebellen HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["reb_spawn_2","Rebellen Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["reb_spawn_3","Rebellen Hügel","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
@@ -45,7 +45,7 @@ switch (_side) do
 		
 		//if donor, they also get these options
 		if(__GETC__(life_donator) > 0) then {
-			_ret = _ret + [
+			_return = _ret + [
 				["don_spawn_1","Donator","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 				
 			];
