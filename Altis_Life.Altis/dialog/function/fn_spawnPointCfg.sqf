@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_spawnPointCfg.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -27,13 +28,7 @@ switch (_side) do
 	
 	case civilian:
 	{
-		_return = [
-			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
-		];
-		
+	
 		//if have reb license, only spawn here
 		if(license_civ_rebel && playerSide == civilian) then {
 		_return = [
@@ -43,13 +38,25 @@ switch (_side) do
 				];
 		};
 		
-		//if donor, they also get these options
+		//if no rebel license, than can spawn normal loc
+        if(!license_civ_rebel && playerSide == civilian) then {
+        _return = [
+                    ["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                    ["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                    ["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+                ];
+        };
+		
+		
+		/*if donor, they also get these options
 		if(__GETC__(life_donator) > 0) then {
 			_return = _ret + [
 				["don_spawn_1","Donator","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 				
 			];
 		};
+		*/
 		
 		if(count life_houses > 0) then {
 			{
