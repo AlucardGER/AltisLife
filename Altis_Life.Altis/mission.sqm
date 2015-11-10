@@ -9828,7 +9828,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=215;
+		items=220;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -9965,7 +9965,7 @@ class Mission
 		{
 			position[]={9188.2607,14.383561,21670.799};
 			name="Rebelop";
-			text="Rebellen Außenposten";
+			text="Rebellen HQ";
 			type="mil_triangle";
 		};
 		class Item20
@@ -10800,7 +10800,7 @@ class Mission
 		{
 			position[]={20695.104,4.5465231,19467.057};
 			name="oil_trader_1";
-			text="Salt Trader";
+			text="Salzhändler";
 			type="b_unknown";
 			colorName="ColorOrange";
 		};
@@ -10865,14 +10865,14 @@ class Mission
 		{
 			position[]={12290.406,123.8956,8899.7314};
 			name="Rebelop_1";
-			text="Rebellen Außenposten";
+			text="Rebellen Hügel";
 			type="mil_triangle";
 		};
 		class Item134
 		{
 			position[]={20081.033,100.96766,6737.1904};
 			name="Rebelop_2";
-			text="Rebellen Außenposten";
+			text="Rebellen Base";
 			type="mil_triangle";
 		};
 		class Item135
@@ -11511,6 +11511,38 @@ class Mission
 			type="loc_Tourism";
 			colorName="ColorGreen";
 			angle=-44.3386;
+		};
+		class Item215
+		{
+			position[]={9200.6797,14.682659,21652.596};
+			name="reb_spawn_1";
+			type="Empty";
+		};
+		class Item216
+		{
+			position[]={11612.084,23.516619,11989.175};
+			name="don_spawn_1";
+			type="Empty";
+		};
+		class Item217
+		{
+			position[]={11612.083,23.594566,11961.079};
+			name="Spender";
+			text="  Donator";
+			type="mil_circle";
+			colorName="ColorYellow";
+		};
+		class Item218
+		{
+			position[]={12269.565,123.66496,8903.9561};
+			name="reb_spawn_3";
+			type="Empty";
+		};
+		class Item219
+		{
+			position[]={20080.092,100.96655,6745.5981};
+			name="reb_spawn_2";
+			type="Empty";
 		};
 	};
 };
