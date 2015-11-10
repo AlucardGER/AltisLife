@@ -34,7 +34,11 @@ switch (_side) do
 		_return = [
 					["reb_spawn_1","Rebellen HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 					["reb_spawn_2","Rebellen Base","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-					["reb_spawn_3","Rebellen Hügel","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+					["reb_spawn_3","Rebellen Hügel","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                    ["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+					["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                    ["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 				];
 		};
 		
