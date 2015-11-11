@@ -15,12 +15,6 @@ switch(playerSide) do
 	case west: 
 	{
 		ctrlShow[2011,false];
-		
-		if(__GETC__(life_coplevel) < 1) then
-		{
-			ctrlShow[9800,false];
-		};
-
 	};
 	
 	case civilian:
