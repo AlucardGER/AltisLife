@@ -24,3 +24,10 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
 } foreach ["hospital_2","hospital_3"];
 
 [8,true,true,12] execFSM "core\fsm\timeModule.fsm";
+
+{  
+	( ( _x select 0 ) nearestObject ( _x select 1 ) ) hideObjectGlobal true;
+} forEach [
+	[ [ 3692, 13156, 102703 ], 1120919 ]
+	
+];
