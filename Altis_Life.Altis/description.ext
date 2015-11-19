@@ -90,6 +90,13 @@ class CfgMusic
                 sound[] = {"sounds\music\This_Is_War.ogg", 1, 1};
                 titles[] = {};
         };
+		
+		class JamFm
+        {
+                name = "JamFM";
+                sound[] = {"sounds\music\jamfm.m3u", 1, 1};
+                titles[] = {};
+        };
 };
 
 class CfgDebriefing
