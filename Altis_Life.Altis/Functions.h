@@ -236,6 +236,7 @@ class Life_Client_Core
 		class loadGear {};
 		class stripDownPlayer {};
 		class fadeSound {};
+		class autoSave {};
 	};
 	
 	class Network
