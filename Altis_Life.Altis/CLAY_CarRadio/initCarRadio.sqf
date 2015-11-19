@@ -65,4 +65,3 @@ CLAY_RadioDisplay = 9;
 CLAY_RadioColor = "Black";
 //Custom Music
 CLAY_RadioAddMusic = [["This_Is_War", "This is War", 175]];
-CLAY_RadioAddMusic = [["JamFM", "JamFM", Live]];

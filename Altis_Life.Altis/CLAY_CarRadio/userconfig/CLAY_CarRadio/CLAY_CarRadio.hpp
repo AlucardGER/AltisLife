@@ -3,7 +3,6 @@
 
 _userPlaylist = [];
 _userPlaylist = [ ["This_Is_War", "This is War", 175] ];
-_userPlaylist = [ ["JamFM", "jamFM", Live] ];
 
 
 
