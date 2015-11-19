@@ -392,4 +392,11 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+	
+	class Ausweis
+    {
+        file = "core\Ausweis";
+        class Lizenzsehen {};
+        class Lizenzzeigen {};
+    };
 };
