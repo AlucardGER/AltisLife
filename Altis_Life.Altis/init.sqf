@@ -18,3 +18,4 @@ StartProgress = true;
 [] execVM "AdminTool\loop.sqf"; //Load AdminMenu
 [] execVM "script\fn_statusBar.sqf"; //Load the Statusbar
 nul=[] execVM "script\intlight.sqf"; //Load Interior Lighting
+[] execVM "CLAY_CarRadio\initCarRadio.sqf"; //Load Car Radio

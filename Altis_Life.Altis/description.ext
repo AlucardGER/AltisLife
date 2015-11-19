@@ -80,6 +80,18 @@ class CfgSounds
 	};
 };
 
+class CfgMusic
+{
+        tracks[]={};
+ 
+        class This_Is_War
+        {
+                name = "This is War";
+                sound[] = {"sounds\music\This_Is_War.ogg", 1, 1};
+                titles[] = {};
+        };
+};
+
 class CfgDebriefing
 {
 	class NotWhitelisted

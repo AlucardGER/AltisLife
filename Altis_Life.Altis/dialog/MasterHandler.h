@@ -27,3 +27,4 @@
 #include "wantedadd2.hpp"
 #include "AS_AdminMenu.hpp"
 #include "AS_Refund.hpp"
+#include "Radio.hpp"
