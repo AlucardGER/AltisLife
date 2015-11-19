@@ -29,7 +29,7 @@ player createDiarySubject ["safezones","Safe Zones (No Killing)"];
 		[
 			"Custom Change Log",
 				"
-					Die Changelogs können auf unserer Homepage angesehen werden.
+					Die Changelogs koennen auf unserer Homepage angesehen werden.
 				"
 		]
 	];

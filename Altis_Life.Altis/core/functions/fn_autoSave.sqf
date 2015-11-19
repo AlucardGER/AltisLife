@@ -7,7 +7,7 @@
 */
 
 while {true} do {    //Tells the function to continually loop.
-    sleep 360;   //Sleep for 360 seconds/6 minutes
+    sleep 300;   //Sleep for 300 seconds/5 minutes
     if (alive player) then   //If the player is alive, then do this
         {
         [false] call SOCK_fnc_syncData;;  //Same function used by the "Sync" button
