@@ -7,7 +7,6 @@
 	Opens and manages the bank menu.
 */
 private["_display","_text","_units","_type"];
-if(life_ATMhacked == 1) exitWith { hint format["Da die Zentralbank gehakt wurde, steht dieser Service im Moment nicht zur Verfügung"]; };
 
 if(!life_use_atm) exitWith
 {

@@ -102,7 +102,6 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
-[] execVM "core\initHTB.sqf";
 [] execVM "core\config\fn_initSkin.sqf";
 [] execVM "core\welcome.sqf";
 [] spawn life_fnc_autoSave; // Init automatically saving gear

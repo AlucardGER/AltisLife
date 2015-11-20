@@ -19,10 +19,3 @@ StartProgress = true;
 [] execVM "script\fn_statusBar.sqf"; //Load the Statusbar
 nul=[] execVM "script\intlight.sqf"; //Load Interior Lighting
 [] execVM "CLAY_CarRadio\initCarRadio.sqf"; //Load Car Radio
-
-if(isDedicated && isNil("life_ATMhacked")) then
-    {
-    	life_ATMhacked = 0;
-    	publicVariable "life_ATMhacked";
-    	diag_log format["life_ATMhacked: %1",life_ATMhacked];
-    };

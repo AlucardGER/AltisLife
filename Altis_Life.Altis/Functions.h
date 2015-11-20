@@ -399,15 +399,4 @@ class Life_Client_Core
         class Lizenzsehen {};
         class Lizenzzeigen {};
     };
-	
-	class hacking
-	{
-		file = "core\HackTheBank";
-		class hackthebank {};		
-		class fedCamHacked {};
-		class lappi {};
-		class packupLappi {};
-		class randomRound {};
-		
-	};
 };
