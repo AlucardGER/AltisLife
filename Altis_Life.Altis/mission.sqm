@@ -1834,7 +1834,6 @@ class Mission
 					id=84;
 					side="CIV";
 					vehicle="C_man_1_3_F";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="civ_70";
@@ -3495,7 +3494,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=760;
+		items=757;
 		class Item0
 		{
 			position[]={3621.8857,-9.5367398e-007,13096.901};
@@ -11379,46 +11378,10 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false; this addAction[""<t color='#ADFF2F'>ATM</t>"",ES_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];";
 		};
-		class Item757
-		{
-			position[]={3459.4236,4.5527596,13139.699};
-			azimut=1125.7815;
-			special="NONE";
-			id=970;
-			side="EMPTY";
-			vehicle="Land_TablePlastic_01_F";
-			leader=1;
-			skill=0.60000002;
-			description="Civ 70";
-		};
-		class Item758
-		{
-			position[]={13883.684,21.241535,18726.848};
-			azimut=1116.3698;
-			special="NONE";
-			id=971;
-			side="EMPTY";
-			vehicle="Land_TablePlastic_01_F";
-			leader=1;
-			skill=0.60000002;
-			description="Civ 70";
-		};
-		class Item759
-		{
-			position[]={16754.434,19.305666,12634.021};
-			azimut=1091.0812;
-			special="NONE";
-			id=972;
-			side="EMPTY";
-			vehicle="Land_TablePlastic_01_F";
-			leader=1;
-			skill=0.60000002;
-			description="Civ 70";
-		};
 	};
 	class Markers
 	{
-		items=230;
+		items=224;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -13161,105 +13124,6 @@ class Mission
 			name="air_god_2_1";
 			type="Empty";
 			angle=-252.58122;
-		};
-		class Item224
-		{
-			position[]={3459.4414,4.5516081,13139.781};
-			name="wlan_1";
-			type="Empty";
-		};
-		class Item225
-		{
-			position[]={3458.498,4.5385656,13140.563};
-			name="Hotspot 1";
-			text="Hotspot 1";
-			type="mil_dot";
-			colorName="ColorRed";
-		};
-		class Item226
-		{
-			position[]={13883.659,21.238602,18726.797};
-			name="wlan_2";
-			type="Empty";
-		};
-		class Item227
-		{
-			position[]={13882.926,21.212828,18726.332};
-			name="Hotspot 2";
-			text="Hotspot 2";
-			type="mil_dot";
-			colorName="ColorRed";
-		};
-		class Item228
-		{
-			position[]={16754.703,19.312485,12633.939};
-			name="wlan_3";
-			type="Empty";
-		};
-		class Item229
-		{
-			position[]={16752.959,19.268324,12634.403};
-			name="Hotspot 3";
-			text="Hotspot 3";
-			type="mil_dot";
-			colorName="ColorRed";
-		};
-	};
-	class Sensors
-	{
-		items=3;
-		class Item0
-		{
-			position[]={16752.035,19.2449,12634.944};
-			a=5;
-			b=3;
-			angle=190.851;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="{_x == player}count thisList > 0;";
-			expActiv="hint ""Du hast nun volles und kostenloses Wlan!""";
-			expDesactiv="hint ""Wlan-Verbindung getrennt!""";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={3459.8169,4.5484991,13142.344};
-			a=4;
-			b=4;
-			angle=42.3125;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="{_x == player}count thisList > 0;";
-			expActiv="hint ""Du hast nun volles und kostenloses Wlan!""";
-			expDesactiv="hint ""Wlan-Verbindung getrennt!""";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={13884.043,21.044565,18721.15};
-			a=5;
-			b=5;
-			angle=36.3993;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="{_x == player}count thisList > 0;";
-			expActiv="hint ""Du hast nun volles und kostenloses Wlan!""";
-			expDesactiv="hint ""Wlan-Verbindung getrennt!""";
-			class Effects
-			{
-			};
 		};
 	};
 };
