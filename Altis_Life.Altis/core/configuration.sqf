@@ -31,6 +31,7 @@ life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
 life_fadeSound = false;
+life_theLappi = ObjNull;
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?
@@ -159,6 +160,7 @@ life_inv_items =
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
 	"life_inv_storagebig"
+	"life_inv_laptop"
 ];
 
 //Setup variable inv vars.
@@ -238,6 +240,7 @@ sell_array =
 	["spikeStrip",1200],
 	["cement",1950],
 	["goldbar",95000]
+	["lappi",1000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -268,6 +271,7 @@ buy_array =
 	["defusekit",2500],
 	["storagesmall",75000],
 	["storagebig",150000]
+	["lappi",10000]
 ];
 __CONST__(buy_array,buy_array);
 

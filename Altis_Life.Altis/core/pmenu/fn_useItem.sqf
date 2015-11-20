@@ -87,6 +87,28 @@ switch (true) do
 		[] spawn life_fnc_pickAxeUse;
 	};
 	
+	case (_item == "lappi"):
+	{
+		_wlanZone = "";
+		_wlanZones = ["wlan_1","wlan_2","wlan_3"];
+		{
+			if(player distance (getMarkerPos _x) < 30) exitWith {_WlanZone = _x;};
+		} foreach _wlanZones;
+		if(_wlanZone == "") exitWith {hint "Du kannst hier keinen Laptop aufbauen, da du hier kein Wlan hast!";};
+		
+		
+		_table = nearestObject[player, "Land_TablePlastic_01_F"];
+		_tablePos = getPos _table;
+		if(player distance _tablePos > 5) exitWith {hint "Du musst den Laptop an einem Tisch aufbauen!";};
+		
+		
+		if(!isNull life_theLappi) exitWith {hint "Du kannst nur einen Laptop aufbauen!";};
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_lappi;
+		};
+	};
+	
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";
