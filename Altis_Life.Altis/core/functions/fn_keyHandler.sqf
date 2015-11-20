@@ -112,21 +112,28 @@ switch (_code) do
 			};
 		};
 	};
-	//L Key?
-	case 38: 
-	{
-		//If cop run checks for turning lights on.
-		if(_shift && playerSide == west) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F", "B_MRAP_01_hmg_F", "I_MRAP_03_F"]) then{
-				if(!isNil {vehicle player getVariable "lights"}) then {
-					[vehicle player] call life_fnc_sirenLights;
-					_handled = true;
-				};
-			};
-		};
-		
-		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
-	};
+    case 38: //Shift + L Key = Emergency Lights - Radar
+    {
+        _veh = vehicle player;
+        if (_shift && !_alt && !_ctrlKey) then
+        {
+            if(playerSide in [west,independent] && _veh != player && ((driver _veh) == player)) then
+            {
+                if(!isNil {_veh getVariable "lights"}) then
+                {
+                    if(playerSide == west) then
+                    {
+                        [_veh] call life_fnc_sirenLights;
+                    } else {
+                        [_veh] call life_fnc_medicSirenLights;
+                    };
+                };
+            };
+            _handled = true;
+        };
+        if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
+    };
+ 
 	//Y Player Menu
 	case 21:
 	{
@@ -159,37 +166,37 @@ switch (_code) do
 		};
 	};
 	
-//F Key
-	case 33:
-	{
-		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
-		{
-			[] spawn
-			{
-				life_siren_active = true;
-				sleep 4.7;
-				life_siren_active = false;
-			};
-			_veh = vehicle player;
-			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
-			if((_veh getVariable "siren")) then
-			{
-				titleText [localize "STR_MISC_SirensOFF","PLAIN"];
-				_veh setVariable["siren",false,true];
-			}
-				else
-			{
-				titleText [localize "STR_MISC_SirensON","PLAIN"];
-				_veh setVariable["siren",true,true];
-				if(playerSide == west) then {
-					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
-				} else {
-					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
-				};
-			};
-		};
-	};
+   case 33: //F Key = Sirens
+    {
+        if (!_shift && !_alt && !_ctrlKey) then //F Key = EMS/Cops Sirens
+        {
+            _veh = vehicle player;
+            if(playerSide in [west,independent] && _veh != player && !life_siren_active && ((driver _veh) == player)) then
+            {
+                [] spawn
+                {
+                    life_siren_active = true;
+                    uiSleep 0.5;
+                    life_siren_active = false;
+                };
+                if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
+                if((_veh getVariable "siren")) then
+                {
+                    titleText [localize "STR_MISC_SirensOFF","PLAIN"];
+                    _veh setVariable["siren",false,true];
+                } else {
+                    titleText [localize "STR_MISC_SirensON","PLAIN"];
+                    _veh setVariable["siren",true,true];
+                    if(playerSide == west) then {
+                        [[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
+                    } else {
+                        [[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+                    };
+                };
+            };
+        };
+    };
+ 
 	
 	//Holster / recall weapon.
 	case 35:
@@ -254,6 +261,29 @@ switch (_code) do
 			};
 		};
 	};
+	
+	    case 48: // B Key = "Move Bitch" Chirp for Cop & EMS
+    {
+        if (!_shift && !_alt && !_ctrlKey) then
+        {
+            _veh = vehicle player;
+            if(playerSide in [west,independent] && _veh != player && !life_chirp_active && ((driver _veh) == player)) then
+            {
+                [] spawn
+                {
+                    life_chirp_active = true;
+                    uiSleep 0.5;
+                    life_chirp_active = false;
+                };
+                if(playerSide == west) then
+                {
+                    [[_veh],"life_fnc_copChirp",true,false] spawn life_fnc_MP;
+                } else {
+                    [[_veh],"life_fnc_medicChirp",true,false] spawn life_fnc_MP;
+                };
+            };
+        };
+    };
 };
 
 _handled;
