@@ -80,6 +80,7 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+		class teamMarkers {};
 	};
 	
 	class Actions
@@ -191,6 +192,10 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
+		class revokeLicense {};
+		class smartphone {};
+		class newMsg {};
+		class showMsg {};
 	};
 	
 	class Functions
@@ -237,6 +242,7 @@ class Life_Client_Core
 		class stripDownPlayer {};
 		class fadeSound {};
 		class autoSave {};
+		class Opener {};
 	};
 	
 	class Network
@@ -311,6 +317,7 @@ class Life_Client_Core
 		class fedCamDisplay {};
 		class copLoadout {};
 		class ticketPaid {};
+		class copEnter {};
 	};
 	
 	class Gangs
@@ -399,4 +406,14 @@ class Life_Client_Core
         class Lizenzsehen {};
         class Lizenzzeigen {};
     };
+	
+	 class hacking
+	{
+		file = "core\HackTheBank";
+		class hackthebank {}; 
+		class fedCamHacked {};
+		class lappi {};
+		class packupLappi {};
+		class randomRound {};
+	};
 };

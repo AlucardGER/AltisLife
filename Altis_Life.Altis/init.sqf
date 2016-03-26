@@ -8,6 +8,13 @@ StartProgress = false;
 if(!isDedicated) then { X_Client = true;};
 enableSaving[false,false];
 
+if(isDedicated && isNil("life_ATMhacked")) then
+{
+ life_ATMhacked = 0;
+ publicVariable "life_ATMhacked";
+ diag_log format["life_ATMhacked: %1",life_ATMhacked];
+};
+
 life_versionInfo = "Altis Life RPG v3.1.4.8";
 [] execVM "briefing.sqf"; //Load Briefing
 [] execVM "KRON_Strings.sqf";

@@ -5062,4 +5062,76 @@
 			<Portuguese>Roubar Jogador</Portuguese>
 		</Key>
 	</Package>
+	<Package name="Smartphone">
+		<Key ID="STR_PM_Smartphone">
+			<Original>Smartphone</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_TITLE">
+			<Original>Smartphone Menu</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
+			<Original>Playerlist</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
+			<Original>Nachrichten  | VON | WANN</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
+			<Original>Nachricht zum lesen auswählen</Original>
+		</Key>
+		<Key ID="STR_Global_Close">
+			<Original>Close</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_SCHREIBEN">
+			<Original>Schreiben</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_NOTRUF">
+			<Original>Notruf</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_Absenden">
+			<Original>Absenden</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
+			<Original>Nachricht an:</Original>
+		</Key>
+		<Key ID="STR_SMARTPHONE_Notruftitle">
+			<Original>NOTRUFE | Abuse führt zum BAN!</Original>
+		</Key>
+	</Package>
+	<Key ID="STR_pAct_DriverSeat">
+			<Original>Auf den Fahrersitz</Original>
+		</Key>
+		<Key ID="STR_pAct_PassengerSeat">
+			<Original>Auf den Passagiersitz</Original>
+		</Key>
+		<Key ID="STR_pAct_GunnerSeat">
+			<Original>Gunner Seat</Original>
+		</Key>
+		<Key ID="STR_pAct_GoOut">
+			<Original>Aus dem Fahrzeug austeigen</Original>
+		</Key>
+		
+	<Key ID="STR_pInAct_RevokeLicense">
+            <Orignal>Lizenzen entziehen</Orignal>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Driver">
+            <Original>Dein Führerschein wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Truck">
+            <Original>Dein LKW Führerschein wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Pilot">
+            <Original>Dein Flugschein wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Boating">
+            <Original>Dein Bootsschein wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Diving">
+            <Original>Deine Taucherlizez wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_Taxi">
+            <Original>Dein Taxischein wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
+        <Key ID="STR_Civ_RevokeLicense_AllMotor">
+            <Original>Alle deine Fahrlizenzen wurde von der Polizei beschlagnahmt!</Original>
+        </Key>
 </Project>

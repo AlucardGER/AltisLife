@@ -1,6 +1,6 @@
 author = "Tonic";
 onLoadName = "Force Gaming Clan";
-onLoadMission = "Server.Alpha.FGC ";
+onLoadMission = "Privater Testserver | by Tonic - edit by Niclas";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 1;
@@ -62,7 +62,7 @@ class CfgSounds
 	class Intro
   {
     name="Intro";
-    sound[]={"\sounds\intro.ogg",0.9,1};
+    sound[]={"\sounds\intro.ogg",1,1};
     titles[] = {};
   };
 	

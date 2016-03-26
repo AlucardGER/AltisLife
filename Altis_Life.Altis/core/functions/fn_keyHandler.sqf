@@ -31,6 +31,7 @@ switch (_code) do
 	{
 		if(playerSide == west && !visibleMap) then {
 			[] spawn life_fnc_copMarkers;
+			[] spawn life_fnc_teamMarkers;
 		};
 	};
 	
@@ -214,53 +215,115 @@ switch (_code) do
 		};
     };
 	
-	//U Key
-	case 22:
-	{
-		if(!_alt && !_ctrlKey) then
-		{
-			if(vehicle player == player) then
-			{
-				_veh = cursorTarget;
-			}
-				else
-			{
-				_veh = vehicle player;
-			};
-			
-			_locked = locked _veh;
-			
-			if(_veh in life_vehicles && player distance _veh < 6.5 OR vehicle player == _veh) then
-			{
-				if(_locked == 2) then
-				{
-					if(local _veh) then
-					{
-						_veh lock 0;
-					}
-						else
-					{
-						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
-					};
-					systemChat "Du hast dein Fahrzeug aufgeschlossen.";
-					player say3D "car_lock";
-				}
-					else
-				{
-					if(local _veh) then
-					{
-						_veh lock 2;
-					}
-						else
-					{
-						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
-					};
-					systemChat "Du hast dein Fahrzeug abgeschlossen.";
-					player say3D "unlock";
-				};
-			};
-		};
-	};
+    //U Key
+    case 22:
+    {
+        if(!_alt && !_ctrlKey) then {
+            if(vehicle player == player) then {
+                _veh = cursorTarget;
+            } else { //www.infinity-core.de
+                _veh = vehicle player;
+            };
+            
+            if(_veh isKindOf "House_F" && playerSide == civilian) then {
+                if(_veh in life_vehicles && player distance _veh < 8) then {
+                    _door = [_veh] call life_fnc_nearestDoor;
+                    if(_door == 0) exitWith {hint "Du bist nicht in der Nähe einer Tür!"};
+                    _locked = _veh getVariable [format["bis_disabled_Door_%1",_door],0];
+                    if(_locked == 0) then {
+                        _veh setVariable[format["bis_disabled_Door_%1",_door],1,true];
+                        _veh animate [format["door_%1_rot",_door],0];
+                        systemChat "You have locked that door.";
+                    } else {
+                        _veh setVariable[format["bis_disabled_Door_%1",_door],0,true];
+                        _veh animate [format["door_%1_rot",_door],1];
+                        systemChat "Du hast die Tür aufgeschlossen.";
+                    };
+                };
+            } else {
+                _locked = locked _veh;
+            
+            if(_veh in life_vehicles && player distance _veh < 8) then
+            {
+                if(_locked == 2) then
+                {
+                    if(local _veh) then
+                    {
+                        _veh lock 0;
+                        _veh animateDoor ["door_back_R",1];
+                        _veh animateDoor ["door_back_L",1];
+                            _veh animateDoor ['door_R',1]; 
+                            _veh animateDoor ['door_L',1];
+                            _veh animateDoor ['Door_rear',1];
+                            _veh animateDoor ['Door_LM',1];
+                            _veh animateDoor ['Door_RM',1];
+                            _veh animateDoor ['Door_LF',1];
+                            _veh animateDoor ['Door_RF',1];
+                            _veh animateDoor ['Door_LB',1];
+                            _veh animateDoor ['Door_RB',1];
+                    }
+                        else //www.infinity-core.de
+                    {
+                        [[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+                        _veh animateDoor ["door_back_R",1];
+                        _veh animateDoor ["door_back_L",1];
+                            _veh animateDoor ['door_R',1]; 
+                            _veh animateDoor ['door_L',1];
+                            _veh animateDoor ['Door_rear',1];
+                            _veh animateDoor ['Door_LM',1];
+                            _veh animateDoor ['Door_RM',1];
+                            _veh animateDoor ['Door_LF',1];
+                            _veh animateDoor ['Door_RF',1];
+                            _veh animateDoor ['Door_LB',1];
+                            _veh animateDoor ['Door_RB',1];
+                    };
+                    hint composeText [ image "icons\unlock.paa", "  Fahrzeug aufgeschlossen" ];
+                    player say3D "unlock";
+                    
+                }
+                    else //www.infinity-core.de
+                {
+                    if(local _veh) then
+                    {
+                        _veh lock 2;
+                        _veh animateDoor ["door_back_R",0];
+                        _veh animateDoor ["door_back_L",0];
+                            _veh animateDoor ['door_R',0]; 
+                            _veh animateDoor ['door_L',0];
+                            _veh animateDoor ['Door_rear',0];
+                            _veh animateDoor ['Door_LM',0];
+                            _veh animateDoor ['Door_RM',0];
+                            _veh animateDoor ['Door_LF',0];
+                            _veh animateDoor ['Door_RF',0];
+                            _veh animateDoor ['Door_LB',0];
+                            _veh animateDoor ['Door_RB',0];
+
+                    }
+                        else //www.infinity-core.de
+                    {
+                        [[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+                        _veh animateDoor ["door_back_R",0];
+                        _veh animateDoor ["door_back_L",0];
+                            _veh animateDoor ['door_R',0]; 
+                            _veh animateDoor ['door_L',0];
+                            _veh animateDoor ['Door_rear',0];
+                            _veh animateDoor ['Door_LM',0];
+                            _veh animateDoor ['Door_RM',0];
+                            _veh animateDoor ['Door_LF',0];
+                            _veh animateDoor ['Door_RF',0];
+                            _veh animateDoor ['Door_LB',0];
+                            _veh animateDoor ['Door_RB',0];
+                    };
+                    
+                    hint composeText [ image "icons\lock.paa", "  Fahrzeug abgeschlossen" ];
+                    player say3D "car_lock";
+
+                
+                    };
+                };
+            };
+        };
+    };
 	
 	    case 48: // B Key = "Move Bitch" Chirp for Cop & EMS
     {
@@ -282,6 +345,17 @@ switch (_code) do
                     [[_veh],"life_fnc_medicChirp",true,false] spawn life_fnc_MP;
                 };
             };
+        };
+    };
+	
+	    // O, gate opener
+        case 24:
+    {
+
+        if(playerSide in [west,independent,east] && vehicle 
+		player != player && ((driver vehicle player) == player)) then 
+        {
+            [] call life_fnc_Opener;
         };
     };
 };

@@ -8,19 +8,19 @@
 
 _onScreenTime = 4; //<-- How long is the text on the screen for ? Recommended: 1 
 
-sleep 3; //Wait in seconds before the credits start after player is in-game
+sleep 1; //Wait in seconds before the credits start after player is in-game
 playSound "Intro"; // This calls the code inside of description.ext //
 
 _role1 = "Willkommen beim";
 _role1names = ["Forcegaming - Altis Life - Alpha Server !"];
 _role2 = "Serverinformationen";
-_role2names = ["Sind noch in der Alpha! Wir nutzen die 3.1.4.8 Files von Tonic"];
+_role2names = ["Wir sind noch in der Alpha! Wir nutzen die 3.1.4.8 Files von Tonic"];
 _role3 = "Admins";
 _role3names = ["Jerome / Storm , Tjorben / Protyp3r , Tolga / Real Tolgalität "];
 _role4 = "DEV";
-_role4names = [" Tolga / Real Tolgalität , Niclas / Niclas "];
+_role4names = [" Tolga / Real Tolgalität , Niclas "];
 _role8 = "Teamspeak 3 ";
-_role8names = ["force-gc.de"];
+_role8names = ["ts.force-gc.de"];
  _role9 = "Website";
 _role9names = ["force-gc.de"];
 

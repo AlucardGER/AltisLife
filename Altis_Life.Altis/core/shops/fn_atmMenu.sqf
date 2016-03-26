@@ -18,6 +18,8 @@ if(!dialog) then
 	if(!(createDialog "Life_atm_management")) exitWith {};
 };
 
+if(life_ATMhacked == 1) exitWith { hint format["Da die Zentralbank gehakt wurde, steht dieser Service im Moment nicht zur Verfügung"]; };
+
 disableSerialization;
 
 _display = findDisplay 2700;

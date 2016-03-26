@@ -28,3 +28,5 @@
 #include "AS_AdminMenu.hpp"
 #include "AS_Refund.hpp"
 #include "Radio.hpp"
+#include "revoke_license.h"
+#include "smartphone.hpp"
